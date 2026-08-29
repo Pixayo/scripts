@@ -18,7 +18,7 @@ BLACKLIST=(
 )
 
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
-BACKUP_NAME="backup_$TIMESTAMP.zip"
+BACKUP_NAME="backup_$TIMESTAMP.tar.gz"
 # ------------------------------------------------------
 
 OUTPUT="$TARGET/$BACKUP_NAME"
@@ -54,7 +54,7 @@ else
     echo "NOTE: blacklist is empty"
 fi
 
-if ! tar --verbose -czf "$OUTPUT" "${TAR_OPTS[@]}" "${WHITELIST[@]}"; then
+if ! tar -zcvf "$OUTPUT" "${TAR_OPTS[@]}" "${WHITELIST[@]}"; then
     echo "ERROR: the tar command failed to make $OUTPUT"
     exit 1
 else
