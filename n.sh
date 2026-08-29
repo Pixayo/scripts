@@ -7,9 +7,9 @@
 # If no extra argument, opens current directory
 
 if xdg-open $1; then
-  printf "opening: %s" $1
+  printf "opening: %s\n" $1
 else
-  printf "opening: %s" $(pwd)
+  printf "opening: %s as default\n" $(pwd)
   xdg-open .
 fi;
 
