@@ -16,6 +16,7 @@ A personal collection of shell scripts for system automation and utilities. Thes
 | Script | Description | Requirements |
 |--------|-------------|--------------|
 | `backup.sh` | Automated backup utility | `tar`, `date` |
+| `n.sh` | Opens default file explorer | `xdg-open`, `pwd` |
 | `EOF` | `EOF` | `EOF` |
 
 ## Requirements
