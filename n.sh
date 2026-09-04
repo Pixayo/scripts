@@ -8,13 +8,13 @@ set -euo pipefail
 #
 # If no extra argument, opens current directory
 
-path=$(realpath -m -- "${$1:-.}")
+path=$(realpath -m -- "${1:-.}")
 
 if [[ -d "$path" ]]; then
-  xdg-open $path
+  xdg-open "$path"
 else
-  echo "not found: $path"
-  echo "nothing was done"
+  echo "not found: $path" >&2
+  echo "nothing was done" >&2
   exit 1
 fi
 
