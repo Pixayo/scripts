@@ -1,16 +1,20 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Opens the default file explorer
 #
 # Usage: n { URI }
 #
 # If no extra argument, opens current directory
 
-if xdg-open $1; then
-  printf "opening: %s\n" $1
+path=$(realpath -m -- "$1")
+
+if [[ -d "$path" ]]; then
+  xdg-open $path
 else
-  printf "opening: %s as default\n" $(pwd)
-  xdg-open .
-fi;
+  echo "not found: $path"
+  echo "nothing was done"
+fi
 
 # man: xdg-open opens a file or URL in the user's preferred application. [...]
