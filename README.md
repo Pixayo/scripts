@@ -81,7 +81,3 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 BACKUP_NAME="backup_$TIMESTAMP.zip"
 # ------------------------------------------------------
 ```
-
-## Contributing
-
-Contributions are welcome! If you have a script that automates something useful or want to improve an existing one, feel free to open an Issue or submit a Pull Request.
