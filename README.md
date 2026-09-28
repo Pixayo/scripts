@@ -2,15 +2,6 @@
 
 A personal collection of shell scripts for system automation and utilities. These scripts are mostly customizable and free to use under the MIT License.
 
-## 📋 Table of Contents
-
-- [Scripts](#scripts)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-
 ## Scripts
 
 | Script | Description | Requirements |
